@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembelajaran PAI - Nikah, Talaq &amp; KHI</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .font-playfair { font-family: 'Playfair Display', serif; }
+    .gradient-bg { background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5c 100%); }
+    @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-slide-in { animation: slideIn 0.6s ease-out forwards; }
+    .delay-100 { animation-delay: 0.1s; opacity: 0; }
+    .delay-200 { animation-delay: 0.2s; opacity: 0; }
+    .delay-300 { animation-delay: 0.3s; opacity: 0; }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-gray-50">
+  <div id="app-wrapper" class="h-full w-full overflow-auto">
+   <div class="gradient-bg text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+     <div class="animate-slide-in">
+      <h1 id="course-title" class="text-3xl sm:text-4xl font-playfair font-bold mb-2">Pendidikan Agama Islam</h1>
+      <p id="class-info" class="text-lg text-emerald-100">Kelas XI SMA</p>
+      <p id="teacher-name" class="text-sm text-emerald-200 mt-2">Pengajar: Muhammad Yusuf</p>
+     </div>
+    </div>
+   </div>
+   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="animate-slide-in delay-100">
+     <h2 class="text-3xl font-playfair font-bold text-gray-900 mb-2">Materi Pokok: Nikah, Talaq &amp; KHI</h2>
+     <div class="h-1 w-16 bg-gradient-to-r from-emerald-600 to-emerald-400 rounded-full mb-6"></div>
+     <p class="text-gray-600 text-lg">Memahami pernikahan, perceraian, dan hukum keluarga Islam di Indonesia</p>
+    </div>
+    <div class="mb-8 flex gap-2 overflow-x-auto pb-2"><button onclick="showTab('nikah')" id="tab-nikah" class="px-6 py-2 rounded-lg font-semibold text-white bg-emerald-600 flex-shrink-0 transition-all hover:bg-emerald-700">Nikah</button> <button onclick="showTab('talaq')" id="tab-talaq" class="px-6 py-2 rounded-lg font-semibold text-gray-700 bg-gray-200 flex-shrink-0 transition-all hover:bg-gray-300">Talaq</button> <button onclick="showTab('kompilasi')" id="tab-kompilasi" class="px-6 py-2 rounded-lg font-semibold text-gray-700 bg-gray-200 flex-shrink-0 transition-all hover:bg-gray-300">Kompilasi Hukum Islam</button>
+    </div><!-- TAB NIKAH -->
+    <div id="content-nikah" class="mt-12 space-y-8">
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-emerald-600 animate-slide-in delay-200">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="book-open" class="w-6 h-6" style="color: #0f4c3a;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">1. Pengertian Nikah</h3>
+        <div class="space-y-3 text-gray-700">
+         <p><span class="font-semibold">Nikah secara bahasa</span> berarti mengumpulkan dan menggabungkan.</p>
+         <p><span class="font-semibold">Nikah secara syariat</span> adalah akad yang dilakukan antara calon suami dan calon istri untuk membangun rumah tangga yang sakinah, mawaddah, dan warahmah.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-emerald-600 animate-slide-in delay-300">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="scales" class="w-6 h-6" style="color: #0f4c3a;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">2. Hukum Nikah</h3>
+        <div class="space-y-4">
+         <div class="bg-emerald-50 p-4 rounded-lg">
+          <p class="font-semibold text-emerald-900 mb-2">Hukum Asal: Sunnah</p>
+          <p class="text-sm">Nikah dapat berubah menjadi Wajib (jika mampu &amp; takut zina), Makruh (tidak mampu), atau Haram (menikahi mahram).</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-emerald-600 animate-slide-in delay-100">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="heart" class="w-6 h-6" style="color: #0f4c3a;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">3. Tujuan dan Manfaat Nikah</h3>
+        <div class="grid sm:grid-cols-2 gap-4">
+         <div class="bg-emerald-50 p-4 rounded-lg">
+          <p class="font-semibold text-emerald-900 mb-2">Ibadah kepada Allah</p>
+          <p class="text-sm">Melaksanakan perintah Nabi Muhammad Saw.</p>
+         </div>
+         <div class="bg-emerald-50 p-4 rounded-lg">
+          <p class="font-semibold text-emerald-900 mb-2">Ketenangan Hidup</p>
+          <p class="text-sm">Sakinah, mawaddah, dan warahmah dalam rumah tangga</p>
+         </div>
+         <div class="bg-emerald-50 p-4 rounded-lg">
+          <p class="font-semibold text-emerald-900 mb-2">Penjagaan Diri</p>
+          <p class="text-sm">Memelihara diri dari perbuatan zina</p>
+         </div>
+         <div class="bg-emerald-50 p-4 rounded-lg">
+          <p class="font-semibold text-emerald-900 mb-2">Keturunan</p>
+          <p class="text-sm">Menghasilkan generasi shalih dan shalihah</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-emerald-600 animate-slide-in delay-200">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="list-checks" class="w-6 h-6" style="color: #0f4c3a;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">4. Rukun dan Syarat Nikah</h3>
+        <div class="space-y-4">
+         <div>
+          <p class="font-semibold text-gray-900 mb-3">Rukun Nikah (4 rukun):</p>
+          <ol class="space-y-2 text-gray-700 text-sm">
+           <li><span class="font-bold text-emerald-600">1.</span> Calon Suami</li>
+           <li><span class="font-bold text-emerald-600">2.</span> Calon Istri</li>
+           <li><span class="font-bold text-emerald-600">3.</span> Wali dari calon istri</li>
+           <li><span class="font-bold text-emerald-600">4.</span> Ijab dan Qabul</li>
+          </ol>
+         </div>
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold text-blue-900 mb-2">Syarat Nikah:</p>
+          <p class="text-sm text-blue-800">Baligh, berakal sehat, bukan mahram, suka sama suka, tidak dalam ikatan pernikahan lain</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-emerald-600 animate-slide-in delay-300">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="ring" class="w-6 h-6" style="color: #0f4c3a;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">5. Tata Cara Nikah</h3>
+        <div class="space-y-3 text-gray-700 text-sm">
+         <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">
+           1
+          </div>
+          <div>
+           <p class="font-semibold">Khotbah Nikah</p>
+          </div>
+         </div>
+         <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">
+           2
+          </div>
+          <div>
+           <p class="font-semibold">Ijab dari Calon Suami</p>
+          </div>
+         </div>
+         <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">
+           3
+          </div>
+          <div>
+           <p class="font-semibold">Qabul dari Calon Istri</p>
+          </div>
+         </div>
+         <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">
+           4
+          </div>
+          <div>
+           <p class="font-semibold">Pengesahan Akad</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-emerald-600 animate-slide-in delay-100">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="users" class="w-6 h-6" style="color: #0f4c3a;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">6. Hak dan Kewajiban Suami Istri</h3>
+        <div class="space-y-4">
+         <div class="text-sm">
+          <p class="font-semibold text-gray-900 mb-2">Kewajiban Suami:</p>
+          <ul class="space-y-1 text-gray-700">
+           <li>✓ Memberikan nafkah (makanan, pakaian, tempat tinggal)</li>
+           <li>✓ Memperlakukan istri dengan baik dan lemah lembut</li>
+           <li>✓ Membayar mahar kepada istri</li>
+          </ul>
+         </div>
+         <div class="text-sm">
+          <p class="font-semibold text-gray-900 mb-2">Kewajiban Istri:</p>
+          <ul class="space-y-1 text-gray-700">
+           <li>✓ Menaati suami dalam hal yang tidak melanggar agama</li>
+           <li>✓ Menjaga kehormatan dan harta suami</li>
+           <li>✓ Mengurus rumah tangga dan anak-anak</li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-xl shadow-sm p-8 mt-8 animate-slide-in delay-200">
+      <h3 class="text-lg font-playfair font-bold mb-3">📚 Poin Penting Nikah</h3>
+      <ul class="space-y-2 text-sm">
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>Nikah adalah akad suci untuk membentuk keluarga sakinah, mawaddah, dan warahmah</span></li>
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>Rukun nikah ada empat: suami, istri, wali, dan ijab-qabul</span></li>
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>Suami istri memiliki hak dan kewajiban yang saling melengkapi</span></li>
+      </ul>
+     </div>
+    </div><!-- TAB TALAQ -->
+    <div id="content-talaq" class="hidden mt-12 space-y-8">
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-red-600 animate-slide-in delay-200">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="book-open" class="w-6 h-6" style="color: #dc2626;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">1. Pengertian Talaq</h3>
+        <div class="space-y-3 text-gray-700 text-sm">
+         <p><span class="font-semibold">Talaq secara bahasa</span> berarti melepas atau memutuskan.</p>
+         <p><span class="font-semibold">Talaq secara syariat</span> adalah pelepasan ikatan pernikahan oleh suami dengan cara yang ditentukan syariat.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-red-600 animate-slide-in delay-300">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="scales" class="w-6 h-6" style="color: #dc2626;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">2. Hukum Talaq</h3>
+        <div class="space-y-3 text-gray-700 text-sm">
+         <p class="font-semibold">Hukum Asal: Makruh (tidak disukai)</p>
+         <p>Talaq dapat berubah menjadi Haram (bermain-main), Makruh (saat haid), atau Mubah (ada alasan kuat)</p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-red-600 animate-slide-in delay-100">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="list" class="w-6 h-6" style="color: #dc2626;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">3. Macam-Macam Talaq</h3>
+        <div class="space-y-3 text-gray-700 text-sm">
+         <div class="bg-red-50 p-4 rounded-lg">
+          <p class="font-semibold text-red-900">Talaq Ahsan (Talaq yang Baik)</p>
+          <p>Suami mentalak istri sekali saat istri suci tanpa hubungan intim</p>
+         </div>
+         <div class="bg-red-50 p-4 rounded-lg">
+          <p class="font-semibold text-red-900">Talaq Hasan (Talaq yang Baik tapi Tidak Sempurna)</p>
+          <p>Mentalak tiga kali terpisah dalam tiga bulan. Talak 1 &amp; 2 masih bisa dirujuk</p>
+         </div>
+         <div class="bg-red-50 p-4 rounded-lg">
+          <p class="font-semibold text-red-900">Talaq Bid'ah (Talaq yang Tidak Sesuai Syariat)</p>
+          <p>Mentalak saat haid atau tiga kali sekaligus. Tetap jatuh menurut mayoritas ulama</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-red-600 animate-slide-in delay-200">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="list-checks" class="w-6 h-6" style="color: #dc2626;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">4. Syarat-Syarat Talaq Jatuh</h3>
+        <div class="space-y-2 text-gray-700 text-sm">
+         <p>✓ Suami dalam keadaan berakal sehat (bukan gila atau mabuk)</p>
+         <p>✓ Niat atau ucapan talak jelas</p>
+         <p>✓ Istri masih dalam ikatan pernikahan</p>
+         <p>✓ Menggunakan lafaz talak yang jelas</p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-red-600 animate-slide-in delay-300">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="alert-circle" class="w-6 h-6" style="color: #dc2626;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">5. Akibat-Akibat Talaq</h3>
+        <div class="space-y-3 text-gray-700 text-sm">
+         <div class="bg-red-50 p-4 rounded-lg">
+          <p class="font-semibold text-red-900">Talak 1 &amp; 2:</p>
+          <p>Suami masih bisa merujuk (mengembalikan) istri selama masa iddah</p>
+         </div>
+         <div class="bg-red-50 p-4 rounded-lg">
+          <p class="font-semibold text-red-900">Talak 3 (Ba'in Kubra):</p>
+          <p>Pernikahan putus total. Harus akad nikah baru jika ingin kembali bersama</p>
+         </div>
+         <div class="bg-red-50 p-4 rounded-lg">
+          <p class="font-semibold text-red-900">Masa Iddah:</p>
+          <p>Istri menjalani 3 bulan menanti, berhak atas nafkah dan tempat tinggal</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-xl shadow-sm p-8 mt-8 animate-slide-in delay-200">
+      <h3 class="text-lg font-playfair font-bold mb-3">📚 Poin Penting Talaq</h3>
+      <ul class="space-y-2 text-sm">
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>Talaq adalah pelepasan ikatan nikah, hukumnya makruh (tidak disukai)</span></li>
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>Talak Ahsan adalah yang paling sesuai syariat</span></li>
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>Talak 1 &amp; 2 masih bisa dirujuk, talak 3 putus total</span></li>
+      </ul>
+     </div>
+    </div><!-- TAB KOMPILASI HUKUM ISLAM -->
+    <div id="content-kompilasi" class="hidden mt-12 space-y-8">
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-blue-600 animate-slide-in delay-200">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="book" class="w-6 h-6" style="color: #2563eb;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">1. Pengertian Kompilasi Hukum Islam (KHI)</h3>
+        <div class="space-y-3 text-gray-700 text-sm">
+         <p>Kompilasi Hukum Islam adalah himpunan hukum-hukum Islam yang disusun sistematis dan dikodifikasikan menjadi undang-undang positif Indonesia.</p>
+         <p><span class="font-semibold">Sejarah:</span> Ditetapkan melalui Inpres No. 1 Tahun 1991, berlaku 1 Juni 1991</p>
+         <p>Tujuan: Pedoman bagi hakim Pengadilan Agama dalam menyelesaikan perkara keluarga Islam</p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-blue-600 animate-slide-in delay-300">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="compass" class="w-6 h-6" style="color: #2563eb;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">2. Ruang Lingkup KHI</h3>
+        <div class="space-y-2 text-gray-700 text-sm">
+         <div class="bg-blue-50 p-3 rounded-lg">
+          <p><span class="font-semibold">Bab I:</span> Ketentuan Umum dan asas-asas perkawinan</p>
+         </div>
+         <div class="bg-blue-50 p-3 rounded-lg">
+          <p><span class="font-semibold">Bab II:</span> Syarat &amp; rukun perkawinan</p>
+         </div>
+         <div class="bg-blue-50 p-3 rounded-lg">
+          <p><span class="font-semibold">Bab III:</span> Larangan kawin (mahram)</p>
+         </div>
+         <div class="bg-blue-50 p-3 rounded-lg">
+          <p><span class="font-semibold">Bab IV:</span> Perkawinan campuran</p>
+         </div>
+         <div class="bg-blue-50 p-3 rounded-lg">
+          <p><span class="font-semibold">Bab V:</span> Hak, kewajiban, harta bersama, nafkah</p>
+         </div>
+         <div class="bg-blue-50 p-3 rounded-lg">
+          <p><span class="font-semibold">Bab VI:</span> Perceraian (talak &amp; cerai gugat)</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-blue-600 animate-slide-in delay-100">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="lightbulb" class="w-6 h-6" style="color: #2563eb;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">3. Prinsip-Prinsip Perkawinan KHI</h3>
+        <div class="space-y-2 text-gray-700 text-sm">
+         <p>✓ Perkawinan adalah ibadah atas dasar cinta dan kasih sayang</p>
+         <p>✓ Tujuan: Keluarga bahagia berdasarkan ketakwaan</p>
+         <p>✓ Memerlukan izin/persetujuan orang tua melalui wali</p>
+         <p>✓ Harus dicatat di Kantor Urusan Agama (KUA)</p>
+         <p>✓ Suami-istri memiliki hak dan kewajiban setara</p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-blue-600 animate-slide-in delay-200">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="list-checks" class="w-6 h-6" style="color: #2563eb;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">4. Syarat Perkawinan menurut KHI</h3>
+        <div class="space-y-3 text-gray-700 text-sm">
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold text-blue-900">Syarat Calon Suami &amp; Istri:</p>
+          <p>Beragama Islam, baligh (19 thn laki-laki, 16 thn perempuan), berakal sehat, suka sama suka, bukan mahram</p>
+         </div>
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold text-blue-900">Syarat Wali:</p>
+          <p>Laki-laki, beragama Islam, berakal sehat, baligh</p>
+         </div>
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold text-blue-900">Syarat Saksi:</p>
+          <p>Minimal 2 orang, laki-laki, Muslim, baligh, berakal, hadir saat akad</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-blue-600 animate-slide-in delay-300">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="coins" class="w-6 h-6" style="color: #2563eb;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">5. Harta Bersama dalam KHI</h3>
+        <div class="space-y-3 text-gray-700 text-sm">
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold text-blue-900">Harta Bersama:</p>
+          <p>Harta diperoleh selama pernikahan dibagi 50:50 jika perceraian</p>
+         </div>
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold text-blue-900">Harta Pribadi:</p>
+          <p>Sebelum pernikahan dan hibah/warisan tetap milik pribadi masing-masing</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-blue-600 animate-slide-in delay-100">
+      <div class="flex items-start gap-4">
+       <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+        <i data-lucide="gavel" class="w-6 h-6" style="color: #2563eb;"></i>
+       </div>
+       <div class="flex-1">
+        <h3 class="text-xl font-playfair font-bold text-gray-900 mb-3">6. Perceraian dalam KHI</h3>
+        <div class="space-y-3 text-gray-700 text-sm">
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold text-blue-900">Talak:</p>
+          <p>Perceraian dari suami, dicatat di KUA, melalui Pengadilan Agama</p>
+         </div>
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold text-blue-900">Cerai Gugat:</p>
+          <p>Perceraian dari istri karena alasan kuat (ketidakcocokan, pengabaian, dsb)</p>
+         </div>
+         <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold text-blue-900">Akibat:</p>
+          <p>Pembagian harta bersama, hak asuh anak, nafkah anak, masa iddah</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl shadow-sm p-8 mt-8 animate-slide-in delay-200">
+      <h3 class="text-lg font-playfair font-bold mb-3">📚 Poin Penting KHI</h3>
+      <ul class="space-y-2 text-sm">
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>KHI adalah kodifikasi hukum Islam Indonesia sejak 1991</span></li>
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>Perkawinan harus dicatat resmi di KUA</span></li>
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>Harta bersama dibagi 50:50 saat perceraian</span></li>
+       <li class="flex gap-2"><i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i> <span>Pengadilan Agama menjamin hak-hak semua pihak</span></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="gradient-bg text-white mt-16 py-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+     <p class="text-emerald-100">Materi Pembelajaran Pendidikan Agama Islam</p>
+     <p class="text-sm text-emerald-200 mt-2">Semoga bermanfaat dan menambah ilmu pengetahuan kita</p>
+    </div>
+   </div>
+  </div>
+  <script>
+    function showTab(tabName) {
+      const tabs = ['nikah', 'talaq', 'kompilasi'];
+      const buttons = ['tab-nikah', 'tab-talaq', 'tab-kompilasi'];
+      const contents = ['content-nikah', 'content-talaq', 'content-kompilasi'];
+
+      tabs.forEach(tab => {
+        document.getElementById(`content-${tab}`).classList.add('hidden');
+      });
+      buttons.forEach(btn => {
+        document.getElementById(btn).classList.remove('bg-emerald-600', 'text-white');
+        document.getElementById(btn).classList.add('bg-gray-200', 'text-gray-700');
+      });
+
+      document.getElementById(`content-${tabName}`).classList.remove('hidden');
+      document.getElementById(`tab-${tabName}`).classList.remove('bg-gray-200', 'text-gray-700');
+      document.getElementById(`tab-${tabName}`).classList.add('bg-emerald-600', 'text-white');
+
+      lucide.createIcons();
+    }
+
+    const defaultConfig = {
+      course_title: 'Pendidikan Agama Islam',
+      teacher_name: 'Muhammad Yusuf',
+      class_info: 'Kelas XI SMA'
+    };
+
+    let config = { ...defaultConfig };
+
+    async function onConfigChange(cfg) {
+      config = { ...defaultConfig, ...cfg };
+      document.getElementById('course-title').textContent = config.course_title || defaultConfig.course_title;
+      document.getElementById('teacher-name').textContent = 'Pengajar: ' + (config.teacher_name || defaultConfig.teacher_name);
+      document.getElementById('class-info').textContent = config.class_info || defaultConfig.class_info;
+    }
+
+    function mapToCapabilities(cfg) {
+      return {
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(cfg) {
+      return new Map([
+        ['course_title', cfg.course_title || defaultConfig.course_title],
+        ['teacher_name', cfg.teacher_name || defaultConfig.teacher_name],
+        ['class_info', cfg.class_info || defaultConfig.class_info]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    onConfigChange(config);
+    lucide.createIcons();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dafbb5fe1cb3104',t:'MTc3MzI4NjM0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
